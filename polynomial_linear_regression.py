@@ -31,3 +31,11 @@ lin_reg.fit(X, y)
 from sklearn.preprocessing import PolynomialFeatures
 poly_reg = PolynomialFeatures(degree = 2)
 X_poly = poly_reg.fit_transform(X)
+
+# Visualising the Linear Regression results
+plt.scatter(X, y, color = 'red');
+plt.plot(X, lin_reg.predict(X), color = 'blue')
+plt.title('Truth or Bluff (Linear Regression)')
+plt.xlabel('Position level')
+plt.ylabel('Salary')
+plt.show()
